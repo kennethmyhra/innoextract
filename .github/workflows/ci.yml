@@ -11,6 +11,7 @@ on:
 jobs:
 
   linux:
+    if: github.repository == 'dscharrer/innoextract'
     name: Linux build
     runs-on: ubuntu-latest
 
@@ -33,6 +34,8 @@ jobs:
       run: cmake --build ${{github.workspace}}/build --target style
 
   macos:
+    if: github.repository == 'dscharrer/innoextract'
+
     name: macOS build
     runs-on: macos-latest
 
