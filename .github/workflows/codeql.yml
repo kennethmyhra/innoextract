@@ -7,6 +7,7 @@ on:
 jobs:
 
   cpp:
+    if: github.repository == 'dscharrer/innoextract'
     name: C++ analysis
     runs-on: ubuntu-latest
     permissions:
@@ -39,6 +40,7 @@ jobs:
       uses: github/codeql-action/analyze@v3
 
   python:
+    if: github.repository == 'dscharrer/innoextract'
     name: Python analysis
     runs-on: ubuntu-latest
     permissions:
